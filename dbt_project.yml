@@ -38,3 +38,14 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   dbt_cloud_football_analytics:
       +materialized: view
+
+  elementary:
+    +schema: elementary
+
+vars:
+  elementary:
+    edr_cli_run: false # On autorise dbt à préparer les données
+    disable_run_results: false
+    disable_upload_artifacts: false
+
+on-run-end: [] # On laisse vide pour éviter l'erreur de compilation

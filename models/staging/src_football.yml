@@ -4,6 +4,9 @@ sources:
   - name: champions
     tables:
       - name: buts
+        tests:
+          - elementary.volume_anomalies:
+              days_back: 14
       - name: cartons
       - name: classement
       - name: classement_buteurs
